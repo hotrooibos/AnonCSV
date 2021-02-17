@@ -1,6 +1,7 @@
 #coding:utf-8
 
 
-truc = 10** (6-1)
-truc2 = (10**6) - 1
-print(truc, truc2)
+test = "pa000fgfdgdfghghfh2.orig.csv"
+test2 = test[0:-4]
+
+print(test2)
