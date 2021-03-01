@@ -12,14 +12,14 @@ import os
 import pandas
 import random
 import time
-import yaml
+from ruamel.yaml import YAML, scanner
 
 
 # Load configuration
 with open('config.yaml', encoding='utf-8') as yfile:
     try:
-        config = yaml.safe_load(yfile)
-    except yaml.parser.ParserError:
+        config = YAML().load(yfile)
+    except scanner.ScannerError:
         print("Error: wrong YAML format. Check config.yaml.")
         quit()
 
